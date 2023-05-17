@@ -10,7 +10,7 @@ Cette méthode est utilisée pour :
 ## Outils
 
 * **GraphDB**
-* **Silk (jar)** : lignes de commande + fichier XML de paramétrage (utilisé pour automatiser la création des liens selon un seuil de confiance fixé). [**Tutoriel**](https://github.com/solenn-tl/photographes_soduco/blob/main/5_methode_numerique/lancerSilk.md)
+* **Silk (jar)** : lignes de commande + fichier XML de paramétrage (utilisé pour automatiser la création des liens selon un seuil de confiance fixé). [**Tutoriel**](5_methode_numerique/lancerSilk.md)
 * **Silk Workbench** : interface graphique. Utile dans certains cas :
     * Créer la chaîne de traitement de manière plus conviviale qu'avec le fichier de paramétrage XML ;
     * Réaliser une évaluation manuelle des résultat de l'appariement, ce qui permet d'affiner les seuils

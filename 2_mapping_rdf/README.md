@@ -26,7 +26,7 @@ Comprend :
 
 ### Structure
 
-![structure_r2rml](https://github.com/solenn-tl/photographes_soduco/blob/main/doc/images/R2RML.png)
+![structure_r2rml](doc/images/R2RML.png)
 
 ### Etapes
 

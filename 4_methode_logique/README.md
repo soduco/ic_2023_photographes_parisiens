@@ -12,10 +12,10 @@ La méthode logique permet de créer des liens entre les entrées d'annuaire en 
 
 * Pour visualiser graphiquement l'ontologie (_adbAllKeysSolennv3.ttl_) : [Webvowl](https://service.tib.eu/webvowl/)
 
-![ontologie_annuaires](https://github.com/solenn-tl/photographes_soduco/blob/main/doc/images/ontologie.png)
+![ontologie_annuaires](doc/images/ontologie.png)
 
 ## Etapes
-**_Aide pour l'utilisation de GraphDB [ICI](https://github.com/solenn-tl/photographes_soduco/blob/main/doc/Tutoriel_GraphDB.pdf)_**
+**_Aide pour l'utilisation de GraphDB [ICI](doc/Tutoriel_GraphDB.pdf)_**
 
 1. Installer GraphDB (voir Tutoriel - I et II)
 2. Créer un répertoire dans lequel seront déposées vos données et votre ontologie (voir Tutoriel - III)
@@ -25,7 +25,7 @@ La méthode logique permet de créer des liens entre les entrées d'annuaire en 
 4. Importer l'ontologie (_adbAllKeysSolennv3.ttl_) dans le répertoire. Le raisonnement se lance automatiquement (Tutoriel - IV).
     * Temps nécessaire (exemple des photographes ) : pour 34 000 entrées (~ 38 000 ressources), entre 36h et 48h de calcul.
 
-<img src="https://github.com/solenn-tl/photographes_soduco/blob/main/doc/images/Propagation_liens.png" width="400"/>
+<img src="doc/images/Propagation_liens.png" width="400"/>
 
 * (a) Exemple de résultat obtenu avec un raisonnement **SANS** propagation de liens.
 * (b) Exemple de résultat obtenu avec un raisonnement **AVEC** propagation de liens.

@@ -30,10 +30,10 @@ Pour réutiliser ces fichiers pour d'autres cas d'études du projet SoDUCo, il f
 ## Lancer Silk
 
 Structure du dossier<br/>
-<img src="https://github.com/solenn-tl/photographes_soduco/blob/main/doc/images/SilkLigneCommande.png" width="600" text-align="center"/>
+<img src="doc/images/SilkLigneCommande.png" width="600" text-align="center"/>
 
 1. Ouvrir une invite de commande dans le dossier où se trouve silk.jar et le fichier de configuration.
-<img src="https://github.com/solenn-tl/photographes_soduco/blob/main/doc/images/inviteDeCommande.png" width="800" text-align="center"/>
+<img src="doc/images/inviteDeCommande.png" width="800" text-align="center"/>
 
 2. Ecrire la commande suivante dans l'invite de commande (en adaptant les paramètres ci-dessous)
 
