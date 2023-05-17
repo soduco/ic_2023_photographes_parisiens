@@ -1,11 +1,11 @@
 # Appli web de visualisation des données
 
+L'application web est disponible à cette adresse : [https://soduco.github.io/ic_2023_photographes_parisiens/](https://soduco.github.io/ic_2023_photographes_parisiens/)
+
 Cetta application web permet d'interroger les ressources disponibles dans le triplestore par le biais d'un formulaire de recherche (il complète une requête SPARQL). 
 Les données peuvent être visualisées de deux manières : 
 * spatialement (pour celles qui ont pu être géocodées) : affichage dans une carte web-interrogeable
 * temporelement : au clic sur un point, une requête SPARQL est lancée pour récupérer toutes les ressources du sous-graphe associé. Les données sont représentées sous la forme d'une frise chronologique.
-
-La dernière mise à jour de cette version a été réalisée en novembre 2022.
 
 ## Environnement et outils
 
