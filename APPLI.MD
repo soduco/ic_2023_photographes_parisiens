@@ -15,10 +15,10 @@ Les données peuvent être visualisées de deux manières :
 * HTML, CSS, Javascript (Leaflet)
 
 ## Installation en local et utilisation
-* Installer l'application : voir [tutoriel d'installation avec Laragon - partie 1](https://github.com/solenn-tl/photographes_soduco/blob/main/doc/Tutoriel_Laragon.pdf)
-* Démarrer GraphDB (cf [Tutoriel GraphDB](https://github.com/solenn-tl/photographes_soduco/blob/main/doc/Tutoriel_GraphDB.pdf)) : 
-* Choisir (ou créer) le répertoire GraphDB qui contient le graphe spatio-temporel à visualiser (cf [Tutoriel GraphDB](https://github.com/solenn-tl/photographes_soduco/blob/main/doc/Tutoriel_GraphDB.pdf)) ;
+* Installer l'application : voir [tutoriel d'installation avec Laragon - partie 1](doc/Tutoriel_Laragon.pdf)
+* Démarrer GraphDB (cf [Tutoriel GraphDB](doc/Tutoriel_GraphDB.pdf)) : 
+* Choisir (ou créer) le répertoire GraphDB qui contient le graphe spatio-temporel à visualiser (cf [Tutoriel GraphDB](doc/Tutoriel_GraphDB.pdf)) ;
 * Ouvrir le fichier _parameters.js_ avec un éditeur de texte ;
-* Copier l'adresse du répertoire GraphDB dans le fichier _parameters.js_ (remplacer l'adresse actuelle) (cf [Tutoriel GraphDB](https://github.com/solenn-tl/photographes_soduco/blob/main/doc/Tutoriel_GraphDB.pdf)) ;
+* Copier l'adresse du répertoire GraphDB dans le fichier _parameters.js_ (remplacer l'adresse actuelle) (cf [Tutoriel GraphDB](doc/Tutoriel_GraphDB.pdf)) ;
 * Toujours dans _parameters.js_ : choisir d'afficher ou non le fichier de référence (false par défaut, mettre _true_ pour voir l'exemple des photographes)
-* Démarrer Laragon : voir [tutoriel d'installation avec Laragon - partie 2](https://github.com/solenn-tl/photographes_soduco/blob/main/doc/Tutoriel_Laragon.pdf)
+* Démarrer Laragon : voir [tutoriel d'installation avec Laragon - partie 2](doc/Tutoriel_Laragon.pdf)
