@@ -133,7 +133,7 @@ async function searchLinkedDataWithBNF(id) {
       "PREFIX foaf: <http://xmlns.com/foaf/0.1/>"+
       "PREFIX skos: <http://www.w3.org/2004/02/skos/core#>"+
       "SELECT DISTINCT * where { <http://rdf.geohistoricaldata.org/id/directories/entry/" + id + "> owl:sameAs ?uri." +
-      " FILTER (regex(?uri,'bnf'))" +
+      " FILTER (regex(str(?uri),'bnf'))" +
       "}";
   console.log(query3)
   var queryURL3 = repertoireGraphDB + "?query="+encodeURIComponent(query3)+"&?application/json"
