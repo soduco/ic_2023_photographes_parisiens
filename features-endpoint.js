@@ -217,10 +217,10 @@ function requestData() {
   } else if (per.length === 0 && act.length === 0 && spat.length === 0) {
     compquery = ''
   };
-  periodfilter = 'FILTER ((?directoryDate => '+ inputNumberMin.value +') && (?directoryDate <= ' + inputNumberMax.value + ')). '
+  periodfilter = 'FILTER ((?directoryDate >= '+ inputNumberMin.value +') && (?directoryDate <= ' + inputNumberMax.value + ')). '
   //Create the final query
   finalquery = query + compquery + periodfilter + bb_filter + '} GROUP BY ?uri ?index ?person ?geom_wkt ?directoryName ?directoryDate ORDER BY ASC(?directoryDate)';
-  //console.log(finalquery)
+  console.log(finalquery)
   //Create the query URL				
   queryURL = repertoireGraphDB + "?query="+encodeURIComponent(finalquery)+"&?application/json";
 
