@@ -146,6 +146,7 @@ async function searchLinkedDataWithBNF(id) {
     data:''
   }).done((promise) => {
     if (promise.results.bindings.length > 0){
+      console.log(promise.results.bindings)
       $.each(promise.results.bindings, function(i,bindings){
         //console.log(uri,bindings.bnf.value,bindings.name.value)
         html.innerHTML = '<p id="bnfdata" style="height:fit-content;"><a href="' + bindings.uri.value + '" target="_blank">Voir les ressources associées sur data.bnf.fr</a></p>'
