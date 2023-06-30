@@ -150,7 +150,7 @@ async function searchLinkedDataWithBNF(id) {
       $.each(promise.results.bindings, function(i,bindings){
         //console.log(uri,bindings.bnf.value,bindings.name.value)
         html.innerHTML = '<p id="bnfdata" style="height:fit-content;"><a href="' + bindings.uri.value + '" target="_blank">Voir les ressources associées sur data.bnf.fr</a></p>'
-        console.log("Données liées : ")
+        console.log("Données liées : " + bindings.uri.value)
       });
     } else {
       html.innerHTML = '<p id="bnfdata" style="height:fit-content;"></p>'
