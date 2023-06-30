@@ -39,6 +39,7 @@ authors:
 repository-code: 'https://github.com/soduco/ic_2023_photographes_parisiens'
 license: CC-BY-NC-4.0
 preferred-citation:
+  type: "conference-paper"
   authors:
     - given-names: Solenn
       family-names: Tual
@@ -65,10 +66,6 @@ preferred-citation:
       orcid: 'https://orcid.org/0000-0001-5737-5266'
       affiliation: 'LRE, EPITA'
       email: edwin.carlinet@epita.fr
-  identifiers:
-    - type: url
-      value: 'https://hal.science/hal-04121643'
-      description: HAL
   title: "Création d’un graphe de connaissances géohistorique à
   partir d’annuaires du commerce parisien du 19ème siècle:
   application aux métiers de la photographie"
@@ -98,6 +95,10 @@ preferred-citation:
     est testée sur des annuaires du commerce parisien du XIXe
     siècle allant de 1799 à 1908, sur le cas des métiers de la
     photographie
+  identifiers:
+    - type: url
+      value: 'https://hal.science/hal-04121643'
+      description: HAL
   keywords:
     - knowledge-graph
     - semantic web
