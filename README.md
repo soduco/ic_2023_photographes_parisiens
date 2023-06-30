@@ -35,6 +35,6 @@ address = {Strasbourg, France}
 }
 ```
 
-## Acknowledgment
+## Remerciements
 
 Ce travail a été soutenu financièrement par l’[Agence Nationale de la Recherche (ANR)](https://anr.fr/Projet-ANR-18-CE38-0013), dans le cadre du projet [SODUCO project](https://soduco.github.io/) (ANR-18-CE38-0013) et par le Ministère des Armées – Agence de l’innovation de défense (AID).
