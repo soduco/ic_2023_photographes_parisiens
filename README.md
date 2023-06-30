@@ -25,13 +25,13 @@ La figure ci-dessous décrit les étapes de sélection et représentation des en
 
 ```
 @inproceedings{Tual_graphe_geohistorique_2023,
-author = {Tual, Solenn and Abadie, Nathalie and Duménieu, Bertrand and Chazalon, Joseph and Carlinet, Edwin},
-title = {{Création d’un graphe de connaissances géohistorique à partir d’annuaires du commerce parisien du 19ème siècle: application aux métiers de la photographie}},
-booktitle = {Actes des 34es journées francophones d'Ingénierie des connaissances},
-url = {https://hal.science/hal-04121643},
-year = {2023}
-month = {jul}
-address = {Strasbourg, France}
+    author = {Tual, Solenn and Abadie, Nathalie and Duménieu, Bertrand and Chazalon, Joseph and Carlinet, Edwin},
+    title = {{Création d’un graphe de connaissances géohistorique à partir d’annuaires du commerce parisien du 19ème siècle: application aux métiers de la photographie}},
+    booktitle = {Actes des 34es journées francophones d'Ingénierie des connaissances},
+    url = {https://hal.science/hal-04121643},
+    year = {2023}
+    month = {jul}
+    address = {Strasbourg, France}
 }
 ```
 
