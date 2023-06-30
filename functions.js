@@ -6,22 +6,7 @@ var inputNumberMin = document.getElementById('input-number-min');
 var inputNumberMax = document.getElementById('input-number-max');
 
 function createlinkDataSoduco(uri){
-   //console.log(uri)
-    /*
-    var query2 = "PREFIX owl: <http://www.w3.org/2002/07/owl#>" +
-      "PREFIX adb: <http://data.soduco.fr/def/annuaire#>"+
-      "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"+
-      "PREFIX gsp: <http://www.opengis.net/ont/geosparql#>"+
-      "select distinct * where { <http://data.soduco.fr/id/entry/" + uri + "> owl:sameAs ?s." +
-      " ?s a adb:Entry;" +
-      " rdfs:label ?person ;" +
-      " adb:numEntry ?index ;" +
-      " adb:activity ?activity ;" +
-      " adb:address ?address ;" +
-      " adb:directoryDate ?directoryDate ;" +
-      " adb:directoryName ?directoryName ." +
-      "} group by ?s ?index ?person ?activity ?address ?directoryDate ?directoryName order by ?directoryDate"
-    */
+
       var query2 = "PREFIX adb: <http://data.soduco.fr/def/annuaire#> "+
       "PREFIX ont: <http://rdf.geohistoricaldata.org/def/directory#> "+
       "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "+
@@ -44,7 +29,6 @@ function createlinkDataSoduco(uri){
       "?add2 locn:fullAddress ?address."+
       "?add2 prov:wasGeneratedBy <http://rdf.geohistoricaldata.org/id/directories/activity/0001>."+
       "OPTIONAL{?uri <http://rdaregistry.info/Elements/a/P50104> ?activity.}"+
-      //"FILTER ((?directoryDate > "+ inputNumberMin.value +") && (?directoryDate < " + inputNumberMax.value + ")). "+
       "} GROUP BY ?uri ?index ?person ?address ?directoryName ?directoryDate"+
       " ORDER BY ASC(?index) ASC(?directoryDate)"
       
