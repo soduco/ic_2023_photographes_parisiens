@@ -9,7 +9,7 @@ title: >-
 message: >-
   If you use this software, please cite it using the
   metadata from this file.
-type: paper
+type: "conference-paper"
 authors:
   - given-names: Solenn
     family-names: Tual
