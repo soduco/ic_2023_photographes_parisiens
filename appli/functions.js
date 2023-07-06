@@ -207,7 +207,7 @@ function iconByName(name) {
   '<b>Annuaire</b> : ' + feature.properties.directoryName + '</br>'+
   "<b>Identifiant de l'entrée </b> : " + feature.properties.index + '</br></p>';
   layer.bindPopup(texte);
-  //createlinkDataSoduco(feature.properties.index);
+  createlinkDataSoduco(feature.properties.index);
 }
 
 function onEachFeature(feature, layer) {
