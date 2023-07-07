@@ -9,7 +9,7 @@ La figure ci-dessous décrit les étapes de sélection et représentation des en
 
 <img src="doc/images/pipeline.png" width="800" text-align="center"/>
 
-## Article et autres ressources :
+## Article et autres ressources
 * Article : [voir sur Hal](https://hal.science/hal-04121643)
 * Présentation : [voir sur Git-Hub](https://github.com/soduco/ic_2023_photographes_parisiens/blob/main/presentations/IC_2023_Photographes.pdf)
 * Pipeline Segmentation + OCR + NER (Abadie et al.) : 
@@ -34,13 +34,15 @@ La figure ci-dessous décrit les étapes de sélection et représentation des en
 
 ```
 @inproceedings{Tual_graphe_geohistorique_2023,
-    author = {Tual, Solenn and Abadie, Nathalie and Duménieu, Bertrand and Chazalon, Joseph and Carlinet, Edwin},
-    title = {{Création d’un graphe de connaissances géohistorique à partir d’annuaires du commerce parisien du 19ème siècle: application aux métiers de la photographie}},
-    booktitle = {Actes des 34es journées francophones d'Ingénierie des connaissances},
-    url = {https://hal.science/hal-04121643},
-    year = {2023}
-    month = {jul}
-    address = {Strasbourg, France}
+  TITLE = {{Création d’un graphe de connaissances géohistorique à partir d’annuaires du commerce parisien du 19ème siècle: application aux métiers de la photographie}},
+  AUTHOR = {Tual, Solenn and Abadie, Nathalie and Dum{\'e}nieu, Bertrand and Chazalon, Joseph and Carlinet, Edwin},
+  URL = {https://hal.science/hal-04121643},
+  BOOKTITLE = {{34es Journ{\'e}es francophones d'Ing{\'e}nierie des Connaissances (IC 2023) @ Plate-Forme Intelligence Artificielle (PFIA 2023)}},
+  ADDRESS = {Strasbourg, France},
+  SERIES = {IC2023 : 34es Journ{\'e}es francophones d'Ing{\'e}nierie des Connaissances},
+  YEAR = {2023},
+  MONTH = Jul,
+  HAL_ID = {hal-04121643},
 }
 ```
 
