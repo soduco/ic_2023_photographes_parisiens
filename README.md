@@ -9,7 +9,16 @@ La figure ci-dessous décrit les étapes de sélection et représentation des en
 
 <img src="doc/images/pipeline.png" width="800" text-align="center"/>
 
-## Environnement, outils et langages
+## Article et autres ressources :
+* Article : [voir sur Hal](https://hal.science/hal-04121643)
+* Présentation : [voir sur Git-Hub](https://github.com/soduco/ic_2023_photographes_parisiens/blob/main/presentations/IC_2023_Photographes.pdf)
+* Pipeline Segmentation + OCR + NER (Abadie et al.) : 
+    * Dataset OCR+NER : [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6394464.svg)](https://doi.org/10.5281/zenodo.6394464)
+    * Modèles de NER : [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6576008.svg)](https://doi.org/10.5281/zenodo.6576008)
+    * Extraction complète : [Dépôt Nakala](https://nakala.fr/10.34847/nkl.98eem49t)
+* Géocodeur historique : [Accéder à l'API](https://api.geohistoricaldata.org/docs/#/Geocoding)
+
+## Environnement, outils et langages utilisés
 
 * [Graph DB](https://graphdb.ontotext.com/)
 * [Python](https://www.python.org/downloads/) (>= 3.8) + bibliothèques (*requirements_python.md*)
