@@ -94,15 +94,15 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX pav: <http://purl.org/pav/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-select distinct ?label ?voie ?labelo ?voieo where { 
+select distinct ?label ?fadd ?labelo ?faddo where { 
 	?e a ont:Entry.
 	?e rdfs:label ?label.
         ?e locn:address ?add.
-        ?add locn:thoroughfare ?voie.
+        ?add locn:fullAddress ?fadd.
 	?e owl:sameAs ?o.
 	?o rdfs:label ?labelo.
 	?o locn:address ?addo.
-        ?addo locn:thoroughfare ?voieo.
- 	Filter (!sameTerm(?label, ?labelo) && sameTerm(?voie, ?voieo) )
+        ?addo locn:fullAddress ?faddo.
+ 	Filter (!sameTerm(?label, ?labelo) && sameTerm(?fadd, ?faddo) )
 }
 ```
