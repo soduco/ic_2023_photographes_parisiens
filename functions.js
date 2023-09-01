@@ -185,20 +185,24 @@ async function searchLinkedDataWithBNF(id) {
 
 /*Requêter sur data BNF
 //Aide https://www.biblibre.com/en/blog/how-to-request-bnf-and-wikidata-with-sparql/
+//Aide 2 https://api.bnf.fr/fr/sparql-endpoint-de-databnffr
 // https://data.bnf.fr/en/opendata
 
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/>
 
-SELECT ?name (GROUP_CONCAT(DISTINCT?altname ; SEPARATOR=", ") as ?altname) ?act ?fy ?ly
+SELECT ?name (GROUP_CONCAT(DISTINCT?altname ; SEPARATOR=", ") as ?altname) ?image ?act ?fy ?ly
 WHERE {
 <http://data.bnf.fr/ark:/12148/cb119173388> skos:prefLabel ?name.
 <http://data.bnf.fr/ark:/12148/cb119173388> skos:altLabel ?altname.
+OPTIONAL{<http://data.bnf.fr/ark:/12148/cb119173388#about> foaf:depiction ?image.} 
 OPTIONAL{<http://data.bnf.fr/ark:/12148/cb119173388#about>  <http://rdaregistry.info/Elements/a/#P50113> ?act.}
 OPTIONAL{<http://data.bnf.fr/ark:/12148/cb119173388#about> 	bnf-onto:firstYear ?fy.}
 OPTIONAL{<http://data.bnf.fr/ark:/12148/cb119173388#about> bnf-onto:lastYear ?ly}.
 }
+
+=> Comment choisir la même image que sur la page data.bnf (LIMIT 1 choisi une image au hasard)
 
 */
 
