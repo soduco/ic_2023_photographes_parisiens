@@ -167,7 +167,9 @@ async function searchLinkedDataWithBNF(id) {
             html.innerHTML += '<h4 id="bnfdata" style="height:fit-content;">Ressources associées sur data.bnf.fr</h4>'
             html.innerHTML += '<p><a href="' + simple_uri + '" target="_blank"><b>' + bindings.name.value + '</b></a><p>'
             html.innerHTML += '<p>' + bindings.act.value + '</p>'
-            html.innerHTML += '<p><small>Aussi connu sous le(s) nom(s) suivants : ' + bindings.altname.value + '</small></p>'
+            const regex = /\([0-9]{4}-[0-9]{4}\)/g;
+            var alt = bindings.altname.value.replace(regex,'')
+            html.innerHTML += '<p><small>Aussi connu sous le(s) nom(s) suivant(s) : ' + alt.replace(/ ,/g,',') + '</small></p>'
           })
         });
         
