@@ -7,7 +7,8 @@ var map = L.map('map',{
     fullscreenControlOptions: {
         position: 'topleft'
     },
-    layers:[wmsAndriveau]
+    layers:[wmsAndriveau],
+    preferCanvas: true
 }).setView([48.859972,2.347984],13);
 
 L.control.scale().addTo(map);
@@ -99,3 +100,5 @@ logo.onAdd = function(map){
     return div;
 }
 logo.addTo(map);
+
+
