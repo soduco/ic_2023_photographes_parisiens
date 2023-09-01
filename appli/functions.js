@@ -109,7 +109,10 @@ function createlinkDataSoduco(uri){
 
 
 async function searchLinkedDataWithBNF(id) {
+  // HTML content to print data from bnf 
+  var html = document.getElementById('bnfdata')
 
+  // 1. QUery for bnf uri retrieval in directory repository
   var query3 = "PREFIX owl: <http://www.w3.org/2002/07/owl#>" +
       "PREFIX adb: <http://data.soduco.fr/def/annuaire#>"+
       "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"+
@@ -121,7 +124,8 @@ async function searchLinkedDataWithBNF(id) {
       "}";
   console.log(query3)
   var queryURL3 = repertoireGraphDB + "?query="+encodeURIComponent(query3)+"&?application/json"
-  var html = document.getElementById('bnfdata')
+
+  //2. Ajax query to retrieve data from data bnf
  $.ajax({
     url: queryURL3,
     Accept: "application/sparql-results+json",
@@ -129,13 +133,46 @@ async function searchLinkedDataWithBNF(id) {
     dataType:"json",
     data:''
   }).done((promise) => {
+    // If linked data with data.bnf.fr
     if (promise.results.bindings.length > 0){
       console.log(promise.results.bindings)
       $.each(promise.results.bindings, function(i,bindings){
-        //console.log(uri,bindings.bnf.value,bindings.name.value)
-        html.innerHTML = '<p id="bnfdata" style="height:fit-content;"><a href="' + bindings.uri.value + '" target="_blank">Voir les ressources associées sur data.bnf.fr</a></p>'
-        console.log("Données liées : " + bindings.uri.value)
+
+        var simple_uri = bindings.uri.value.replace('#about', '')
+
+        var query4 = "PREFIX skos: <http://www.w3.org/2004/02/skos/core#> "+
+        "PREFIX foaf: <http://xmlns.com/foaf/0.1/> "+
+        "PREFIX bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> "+
+        
+        'SELECT ?name (GROUP_CONCAT(DISTINCT?altname ; SEPARATOR=", ") as ?altname) ?act ?fy ?ly '+
+        "WHERE {"+
+        " <" + simple_uri + "> skos:prefLabel ?name. "+
+        " <" + simple_uri + "> skos:altLabel ?altname. "+
+        " OPTIONAL{<" + bindings.uri.value + ">  <http://rdaregistry.info/Elements/a/#P50113> ?act.} "+
+        " OPTIONAL{<" + bindings.uri.value + "> 	bnf-onto:firstYear ?fy.} "+
+        " OPTIONAL{<" + bindings.uri.value + "> bnf-onto:lastYear ?ly}. "+
+        "}"
+        console.log(query4)
+        var queryURL4 = "https://data.bnf.fr/sparql?query="+encodeURIComponent(query4)+"&format=application/json"
+        console.log(queryURL4)
+        $.ajax({
+          url: queryURL4,
+          Accept: "application/sparql-results+json",
+          contentType:"application/sparql-results+json",
+          dataType:"json",
+          data:''
+        }).done((promise) => {
+          $.each(promise.results.bindings, function(i,bindings){
+            console.log(promise.results.bindings)
+            html.innerHTML += '<h4 id="bnfdata" style="height:fit-content;">Ressources associées sur data.bnf.fr</h4>'
+            html.innerHTML += '<p><a href="' + simple_uri + '" target="_blank"><b>' + bindings.name.value + '</b></a><p>'
+            html.innerHTML += '<p>' + bindings.act.value + '</p>'
+            html.innerHTML += '<p><small>Aussi connu sous le(s) nom(s) suivants : ' + bindings.altname.value + '</small></p>'
+          })
+        });
+        
       });
+    // Else
     } else {
       html.innerHTML = '<p id="bnfdata" style="height:fit-content;"></p>'
       console.log('Pas de ressources externes associées.')
@@ -143,6 +180,25 @@ async function searchLinkedDataWithBNF(id) {
   });
 
 };
+
+/*Requêter sur data BNF
+//Aide https://www.biblibre.com/en/blog/how-to-request-bnf-and-wikidata-with-sparql/
+// https://data.bnf.fr/en/opendata
+
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/>
+
+SELECT ?name (GROUP_CONCAT(DISTINCT?altname ; SEPARATOR=", ") as ?altname) ?act ?fy ?ly
+WHERE {
+<http://data.bnf.fr/ark:/12148/cb119173388> skos:prefLabel ?name.
+<http://data.bnf.fr/ark:/12148/cb119173388> skos:altLabel ?altname.
+OPTIONAL{<http://data.bnf.fr/ark:/12148/cb119173388#about>  <http://rdaregistry.info/Elements/a/#P50113> ?act.}
+OPTIONAL{<http://data.bnf.fr/ark:/12148/cb119173388#about> 	bnf-onto:firstYear ?fy.}
+OPTIONAL{<http://data.bnf.fr/ark:/12148/cb119173388#about> bnf-onto:lastYear ?ly}.
+}
+
+*/
 
 /*******************
  * Style functions *
