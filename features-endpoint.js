@@ -3,21 +3,6 @@
  **************/
 
 //Requête SPARQL pour récupérer les données sur les monuments historiques de Paris
-/*		
-var query = "PREFIX adb: <http://data.soduco.fr/def/annuaire#>"+
-"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"+
-"PREFIX gsp: <http://www.opengis.net/ont/geosparql#>"+
-"select ?uri ?index ?person ?activity ?address ?address_geocoding ?geom_wkt ?directoryName ?directoryDate "+
-"where { ?uri a adb:Entry ;"+
-"rdfs:label ?person ;"+
-"adb:activity ?activity ;"+
-"adb:address ?address ;"+
-"adb:numEntry ?index ;"+
-"adb:address_geocoding ?address_geocoding ;"+
-"gsp:asWKT ?geom_wkt ;"+
-"adb:directoryName ?directoryName ;"+
-"adb:directoryDate ?directoryDate ." //Le where de la requête SPARQL n'est pas fermé pour ajouter les filtres selon les entrées
-*/
 
 var query = "PREFIX adb: <http://data.soduco.fr/def/annuaire#> "+
 "PREFIX ont: <http://rdf.geohistoricaldata.org/def/directory#> "+
@@ -31,7 +16,7 @@ var query = "PREFIX adb: <http://data.soduco.fr/def/annuaire#> "+
 "PREFIX gsp: <http://www.opengis.net/ont/geosparql#> "+
 "PREFIX geof: <http://www.opengis.net/def/function/geosparql/>"+
 'SELECT distinct ?uri ?index ?person (GROUP_CONCAT(DISTINCT ?activity ; SEPARATOR=" |||et||| ") as ?activities) (GROUP_CONCAT(DISTINCT ?address ; SEPARATOR=" |||et||| ") as ?addresses) (GROUP_CONCAT(DISTINCT ?address_geocoding ; SEPARATOR=" |||et||| ") as ?addresses_geocoding) ?geom_wkt ?directoryName ?directoryDate '+
-"WHERE { "+
+"WHERE { GRAPH <http://rdf.geohistoricaldata.org/id/directories/photographes> { "+
 "?uri a ont:Entry."+
 "?uri ont:numEntry ?index."+
 "?uri rdfs:label ?person."+
@@ -219,7 +204,7 @@ function requestData() {
   };
   periodfilter = 'FILTER ((?directoryDate >= '+ inputNumberMin.value +') && (?directoryDate <= ' + inputNumberMax.value + ')). '
   //Create the final query
-  finalquery = query + compquery + periodfilter + bb_filter + '} GROUP BY ?uri ?index ?person ?geom_wkt ?directoryName ?directoryDate ORDER BY ASC(?directoryDate)';
+  finalquery = query + compquery + periodfilter + bb_filter + '}} GROUP BY ?uri ?index ?person ?geom_wkt ?directoryName ?directoryDate ORDER BY ASC(?directoryDate)';
   console.log(finalquery)
   //Create the query URL				
   queryURL = repertoireGraphDB + "?query="+encodeURIComponent(finalquery)+"&?application/json";
