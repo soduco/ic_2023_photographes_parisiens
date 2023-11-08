@@ -4,7 +4,7 @@ La chaîne de traitement proposée dans le projet SoDuCo pour construire un grap
 
 La figure ci-dessous décrit les étapes de sélection et représentation des entrées en RDF (4.4), de liage des entrées (4.5) de géocodage (4.6) et de visualisation (5.2), mise en oeuvre à partir de la base de données des entrées d'annuaires.
 
-**L'interface de visualisation des résultats est [disponible ici](https://soduco.github.io/ic_2023_photographes_parisiens/).**<br/> (! [Nouvelle version (novembre 2023) ICI](https://soduco.geohistoricaldata.org/atelier_graphes_geohistoriques_annuaires/))
+**L'interface de visualisation des résultats est [disponible ici (version juillet 2023)](https://soduco.github.io/ic_2023_photographes_parisiens/).**<br/>[➡️ Nouvelle version de l'application (novembre 2023) ICI](https://soduco.geohistoricaldata.org/atelier_graphes_geohistoriques_annuaires/)<br/>
 **Le endpoint est directement [accessible ici](https://dir.geohistoricaldata.org/).**
 
 <img src="doc/images/pipeline.png" width="800" text-align="center"/>
